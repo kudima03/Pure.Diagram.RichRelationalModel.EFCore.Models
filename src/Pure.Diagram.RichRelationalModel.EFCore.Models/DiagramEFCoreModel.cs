@@ -16,7 +16,7 @@ public sealed record DiagramEFCoreModel : IDiagramRichRelationalModel
         IString description,
         IGuid typeId,
         DiagramTypeEFCoreModel typeNavigation,
-        IEnumerable<SeriesEFCoreModel> seriesNavigation
+        ICollection<SeriesEFCoreModel> seriesNavigation
     )
     {
         Id = id;
@@ -41,5 +41,5 @@ public sealed record DiagramEFCoreModel : IDiagramRichRelationalModel
 
     public IEnumerable<ISeries> Series => SeriesNavigation;
 
-    public IEnumerable<SeriesEFCoreModel> SeriesNavigation { get; }
+    public ICollection<SeriesEFCoreModel> SeriesNavigation { get; }
 }
