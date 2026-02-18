@@ -7,6 +7,9 @@ namespace Pure.Diagram.RichRelationalModel.EFCore.Models;
 
 public sealed record DiagramEFCoreModel : IDiagramRichRelationalModel
 {
+    public DiagramEFCoreModel(IGuid id, IString title, IString description, IGuid typeId)
+        : this(id, title, description, typeId, null!, null!) { }
+
     public DiagramEFCoreModel(
         IGuid id,
         IString title,
