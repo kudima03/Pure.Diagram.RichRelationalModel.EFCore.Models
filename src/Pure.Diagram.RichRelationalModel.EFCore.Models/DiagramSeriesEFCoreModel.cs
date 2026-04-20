@@ -4,9 +4,14 @@ using Pure.Primitives.Abstractions.String;
 
 namespace Pure.Diagram.RichRelationalModel.EFCore.Models;
 
-public sealed record SeriesEFCoreModel : ISeriesRichRelationalModel
+public sealed record DiagramSeriesEFCoreModel : IDiagramSeriesRichRelationalModel
 {
-    public SeriesEFCoreModel(IGuid id, IString label, IString source, IGuid diagramId)
+    public DiagramSeriesEFCoreModel(
+        IGuid id,
+        IString label,
+        IString source,
+        IGuid diagramId
+    )
     {
         Id = id;
         Label = label;
