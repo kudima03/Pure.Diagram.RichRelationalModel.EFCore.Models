@@ -5,7 +5,7 @@ using String = Pure.Primitives.String.String;
 
 namespace Pure.Diagram.RichRelationalModel.EFCore.Models.Tests;
 
-public sealed class SeriesEFCoreModelTests
+public sealed class DiagramSeriesEfCoreModelTests
 {
     [Fact]
     public void ConstructorSetsId()
@@ -15,7 +15,12 @@ public sealed class SeriesEFCoreModelTests
         IString source = new String("Source");
         IGuid diagramId = new Guid(System.Guid.NewGuid());
 
-        SeriesEFCoreModel model = new SeriesEFCoreModel(id, label, source, diagramId);
+        DiagramSeriesEFCoreModel model = new DiagramSeriesEFCoreModel(
+            id,
+            label,
+            source,
+            diagramId
+        );
 
         Assert.Equal(id.GuidValue, model.Id.GuidValue);
     }
@@ -28,7 +33,12 @@ public sealed class SeriesEFCoreModelTests
         IString source = new String("Source");
         IGuid diagramId = new Guid(System.Guid.NewGuid());
 
-        SeriesEFCoreModel model = new SeriesEFCoreModel(id, label, source, diagramId);
+        DiagramSeriesEFCoreModel model = new DiagramSeriesEFCoreModel(
+            id,
+            label,
+            source,
+            diagramId
+        );
 
         Assert.Equal(label.TextValue, model.Label.TextValue);
     }
@@ -41,7 +51,12 @@ public sealed class SeriesEFCoreModelTests
         IString source = new String("Source");
         IGuid diagramId = new Guid(System.Guid.NewGuid());
 
-        SeriesEFCoreModel model = new SeriesEFCoreModel(id, label, source, diagramId);
+        DiagramSeriesEFCoreModel model = new DiagramSeriesEFCoreModel(
+            id,
+            label,
+            source,
+            diagramId
+        );
 
         Assert.Equal(source.TextValue, model.Source.TextValue);
     }
@@ -54,7 +69,12 @@ public sealed class SeriesEFCoreModelTests
         IString source = new String("Source");
         IGuid diagramId = new Guid(System.Guid.NewGuid());
 
-        SeriesEFCoreModel model = new SeriesEFCoreModel(id, label, source, diagramId);
+        DiagramSeriesEFCoreModel model = new DiagramSeriesEFCoreModel(
+            id,
+            label,
+            source,
+            diagramId
+        );
 
         Assert.Equal(diagramId.GuidValue, model.DiagramId.GuidValue);
     }
