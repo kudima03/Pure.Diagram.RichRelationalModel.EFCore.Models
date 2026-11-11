@@ -6,6 +6,21 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [0.1.0-preview.2.1.0] — 2026-11-11
+
+### Added
+
+- Added `net11.0` as a target framework (all existing target frameworks are
+  kept).
+
+### Changed
+
+- Updated the `Pure.Diagram.RichRelationalModel.Abstractions` dependency to
+  `0.1.0-preview.1.1.0`.
+- Packed `README.md` into the NuGet package.
+- Publishing now uses NuGet trusted publishing, and assembly versions are
+  derived from the release tag.
+
 ## [0.1.0-preview.2.0.0] — 2026-04-20
 
 ### Changed
